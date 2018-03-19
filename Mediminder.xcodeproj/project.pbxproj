@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2CE178C205FDA60005654CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE178B205FDA60005654CE /* AppDelegate.swift */; };
+		E2CE178E205FDA60005654CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE178D205FDA60005654CE /* ViewController.swift */; };
+		E2CE1791205FDA60005654CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE178F205FDA60005654CE /* Main.storyboard */; };
+		E2CE1793205FDA60005654CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE1792205FDA60005654CE /* Assets.xcassets */; };
+		E2CE1796205FDA60005654CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE1794205FDA60005654CE /* LaunchScreen.storyboard */; };
+		E2CE17A1205FDA60005654CE /* MediminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE17A0205FDA60005654CE /* MediminderTests.swift */; };
+		E2CE17AC205FDA61005654CE /* MediminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE17AB205FDA61005654CE /* MediminderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2CE179D205FDA60005654CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2CE1780205FDA5F005654CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2CE1787205FDA60005654CE;
+			remoteInfo = Mediminder;
+		};
+		E2CE17A8205FDA61005654CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2CE1780205FDA5F005654CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2CE1787205FDA60005654CE;
+			remoteInfo = Mediminder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2CE1788205FDA60005654CE /* Mediminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE178B205FDA60005654CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2CE178D205FDA60005654CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2CE1790205FDA60005654CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2CE1792205FDA60005654CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2CE1795205FDA60005654CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2CE1797205FDA60005654CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CE179C205FDA60005654CE /* MediminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE17A0205FDA60005654CE /* MediminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediminderTests.swift; sourceTree = "<group>"; };
+		E2CE17A2205FDA60005654CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CE17A7205FDA61005654CE /* MediminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CE17AB205FDA61005654CE /* MediminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediminderUITests.swift; sourceTree = "<group>"; };
+		E2CE17AD205FDA61005654CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2CE1785205FDA60005654CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE1799205FDA60005654CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE17A4205FDA61005654CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2CE177F205FDA5F005654CE = {
+			isa = PBXGroup;
+			children = (
+				E2CE178A205FDA60005654CE /* Mediminder */,
+				E2CE179F205FDA60005654CE /* MediminderTests */,
+				E2CE17AA205FDA61005654CE /* MediminderUITests */,
+				E2CE1789205FDA60005654CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2CE1789205FDA60005654CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE1788205FDA60005654CE /* Mediminder.app */,
+				E2CE179C205FDA60005654CE /* MediminderTests.xctest */,
+				E2CE17A7205FDA61005654CE /* MediminderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2CE178A205FDA60005654CE /* Mediminder */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE178B205FDA60005654CE /* AppDelegate.swift */,
+				E2CE178D205FDA60005654CE /* ViewController.swift */,
+				E2CE178F205FDA60005654CE /* Main.storyboard */,
+				E2CE1792205FDA60005654CE /* Assets.xcassets */,
+				E2CE1794205FDA60005654CE /* LaunchScreen.storyboard */,
+				E2CE1797205FDA60005654CE /* Info.plist */,
+			);
+			path = Mediminder;
+			sourceTree = "<group>";
+		};
+		E2CE179F205FDA60005654CE /* MediminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE17A0205FDA60005654CE /* MediminderTests.swift */,
+				E2CE17A2205FDA60005654CE /* Info.plist */,
+			);
+			path = MediminderTests;
+			sourceTree = "<group>";
+		};
+		E2CE17AA205FDA61005654CE /* MediminderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE17AB205FDA61005654CE /* MediminderUITests.swift */,
+				E2CE17AD205FDA61005654CE /* Info.plist */,
+			);
+			path = MediminderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2CE1787205FDA60005654CE /* Mediminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE17B0205FDA61005654CE /* Build configuration list for PBXNativeTarget "Mediminder" */;
+			buildPhases = (
+				E2CE1784205FDA60005654CE /* Sources */,
+				E2CE1785205FDA60005654CE /* Frameworks */,
+				E2CE1786205FDA60005654CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mediminder;
+			productName = Mediminder;
+			productReference = E2CE1788205FDA60005654CE /* Mediminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2CE179B205FDA60005654CE /* MediminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE17B3205FDA61005654CE /* Build configuration list for PBXNativeTarget "MediminderTests" */;
+			buildPhases = (
+				E2CE1798205FDA60005654CE /* Sources */,
+				E2CE1799205FDA60005654CE /* Frameworks */,
+				E2CE179A205FDA60005654CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2CE179E205FDA60005654CE /* PBXTargetDependency */,
+			);
+			name = MediminderTests;
+			productName = MediminderTests;
+			productReference = E2CE179C205FDA60005654CE /* MediminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2CE17A6205FDA61005654CE /* MediminderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2CE17B6205FDA61005654CE /* Build configuration list for PBXNativeTarget "MediminderUITests" */;
+			buildPhases = (
+				E2CE17A3205FDA61005654CE /* Sources */,
+				E2CE17A4205FDA61005654CE /* Frameworks */,
+				E2CE17A5205FDA61005654CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2CE17A9205FDA61005654CE /* PBXTargetDependency */,
+			);
+			name = MediminderUITests;
+			productName = MediminderUITests;
+			productReference = E2CE17A7205FDA61005654CE /* MediminderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2CE1780205FDA5F005654CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = HSJK;
+				TargetAttributes = {
+					E2CE1787205FDA60005654CE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					E2CE179B205FDA60005654CE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2CE1787205FDA60005654CE;
+					};
+					E2CE17A6205FDA61005654CE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E2CE1787205FDA60005654CE;
+					};
+				};
+			};
+			buildConfigurationList = E2CE1783205FDA5F005654CE /* Build configuration list for PBXProject "Mediminder" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2CE177F205FDA5F005654CE;
+			productRefGroup = E2CE1789205FDA60005654CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2CE1787205FDA60005654CE /* Mediminder */,
+				E2CE179B205FDA60005654CE /* MediminderTests */,
+				E2CE17A6205FDA61005654CE /* MediminderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2CE1786205FDA60005654CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE1796205FDA60005654CE /* LaunchScreen.storyboard in Resources */,
+				E2CE1793205FDA60005654CE /* Assets.xcassets in Resources */,
+				E2CE1791205FDA60005654CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE179A205FDA60005654CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE17A5205FDA61005654CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2CE1784205FDA60005654CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE178E205FDA60005654CE /* ViewController.swift in Sources */,
+				E2CE178C205FDA60005654CE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE1798205FDA60005654CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE17A1205FDA60005654CE /* MediminderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2CE17A3205FDA61005654CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2CE17AC205FDA61005654CE /* MediminderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2CE179E205FDA60005654CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2CE1787205FDA60005654CE /* Mediminder */;
+			targetProxy = E2CE179D205FDA60005654CE /* PBXContainerItemProxy */;
+		};
+		E2CE17A9205FDA61005654CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2CE1787205FDA60005654CE /* Mediminder */;
+			targetProxy = E2CE17A8205FDA61005654CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2CE178F205FDA60005654CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2CE1790205FDA60005654CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2CE1794205FDA60005654CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2CE1795205FDA60005654CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2CE17AE205FDA61005654CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2CE17AF205FDA61005654CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2CE17B1205FDA61005654CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGLMPE8T68;
+				INFOPLIST_FILE = Mediminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hateswiftjustkidding.Mediminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2CE17B2205FDA61005654CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGLMPE8T68;
+				INFOPLIST_FILE = Mediminder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hateswiftjustkidding.Mediminder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E2CE17B4205FDA61005654CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGLMPE8T68;
+				INFOPLIST_FILE = MediminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hateswiftjustkidding.MediminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mediminder.app/Mediminder";
+			};
+			name = Debug;
+		};
+		E2CE17B5205FDA61005654CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGLMPE8T68;
+				INFOPLIST_FILE = MediminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hateswiftjustkidding.MediminderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mediminder.app/Mediminder";
+			};
+			name = Release;
+		};
+		E2CE17B7205FDA61005654CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGLMPE8T68;
+				INFOPLIST_FILE = MediminderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hateswiftjustkidding.MediminderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mediminder;
+			};
+			name = Debug;
+		};
+		E2CE17B8205FDA61005654CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LGLMPE8T68;
+				INFOPLIST_FILE = MediminderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hateswiftjustkidding.MediminderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mediminder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2CE1783205FDA5F005654CE /* Build configuration list for PBXProject "Mediminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE17AE205FDA61005654CE /* Debug */,
+				E2CE17AF205FDA61005654CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE17B0205FDA61005654CE /* Build configuration list for PBXNativeTarget "Mediminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE17B1205FDA61005654CE /* Debug */,
+				E2CE17B2205FDA61005654CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE17B3205FDA61005654CE /* Build configuration list for PBXNativeTarget "MediminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE17B4205FDA61005654CE /* Debug */,
+				E2CE17B5205FDA61005654CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2CE17B6205FDA61005654CE /* Build configuration list for PBXNativeTarget "MediminderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CE17B7205FDA61005654CE /* Debug */,
+				E2CE17B8205FDA61005654CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2CE1780205FDA5F005654CE /* Project object */;
+}
