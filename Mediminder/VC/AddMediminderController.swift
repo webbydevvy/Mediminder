@@ -32,8 +32,8 @@ class AddMediminderController: UIViewController {
     // MARK: Actions
     
     @objc func keyboardWillShow(with notification: Notification) {
-        let key = "UIKeyboardFrameEndUserInfoKey"
-        guard let keyboardFrame = notification.userInfo?[key] as? NSValue else { return }
+//        let key = "UIKeyboardFrameEndUserInfoKey"
+        guard let keyboardFrame = notification.userInfo?[""] as? NSValue else { return }
 
         let keyboardHeight = keyboardFrame.cgRectValue.height
 
