@@ -17,6 +17,9 @@
             <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
         </array>
+        <array key="Chalkduster.ttf">
+            <string>Chalkduster</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Medications-->
@@ -80,7 +83,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="neq-xK-YTc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
                                         <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>

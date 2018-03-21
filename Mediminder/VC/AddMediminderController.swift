@@ -8,6 +8,8 @@
 
 import UIKit
 
+    // MARK: Border Controls
+
 @IBDesignable extension UIButton {
     
     @IBInspectable var borderWidth: CGFloat {
@@ -40,10 +42,9 @@ import UIKit
     }
 }
 
-class AddMediminderController: UIViewController, UITextFieldDelegate {
-    
-    
     // MARK: Outlets
+
+class AddMediminderController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -55,6 +56,7 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
         
         super.viewDidLoad()
     // Do any additional setup after loading the view.
+        textView.becomeFirstResponder()
     }
     
     // keyboard disappears when user touches the screen
@@ -66,6 +68,7 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true)
+        textView.resignFirstResponder()
     }
     @IBAction func done(_ sender: UIButton) {
 
