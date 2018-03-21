@@ -71,7 +71,7 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
         textView.resignFirstResponder()
     }
     @IBAction func done(_ sender: UIButton) {
-
+        dismiss(animated: true)
     }
 }
 

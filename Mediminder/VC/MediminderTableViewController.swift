@@ -28,14 +28,28 @@ class MediminderTableViewController: UITableViewController {
 
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: TableView Delegate
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            // TODO: Delete medication
+            completion(true)
+        }
+        action.image = #imageLiteral(resourceName: "trash")
+        action.backgroundColor = .red
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Check") { (action, view, completion) in
+            // TODO: Delete medication
+            completion(true)
+        }
+        action.image = #imageLiteral(resourceName: "check")
+        action.backgroundColor = .green
+        
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 
 }
