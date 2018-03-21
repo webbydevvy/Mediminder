@@ -7,24 +7,52 @@
 //
 
 import UIKit
+import CoreData
 
 class MediminderTableViewController: UITableViewController {
+    
+    // MARK: Properties
+    
+    var resultsController: NSFetchedResultsController<Medication>!
+    let coreDataStack = CoreDataStack()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Request
+        let request: NSFetchRequest<Medication> = Medication.fetchRequest()
+        let sortDescriptors = NSSortDescriptor(key: "date", ascending: true)
+        request.sortDescriptors = [sortDescriptors]
+        
+        // Initialize
+        resultsController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: coreDataStack.managedContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil
+        )
+        
+        // Fetch
+        do {
+            try resultsController.performFetch()
+        } catch {
+            print("Perform fetch error \(error)")
+        }
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return resultsController.sections?[section].objects?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
+        let medication = resultsController.object(at: indexPath)
+        cell.textLabel?.text = medication.title
 
         return cell
     }
