@@ -31,6 +31,7 @@ class MediminderTableViewController: UITableViewController {
             sectionNameKeyPath: nil,
             cacheName: nil
         )
+        resultsController.delegate = self
         
         // Fetch
         do {
@@ -43,8 +44,7 @@ class MediminderTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return resultsController.sections?[section].objects?.count ?? 0
+        return resultsController.sections?[section].numberOfObjects ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,11 +84,29 @@ class MediminderTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let _ = sender as? UIBarButtonItem, let vc = segue.destination as? AddMediminderController {
-            vc.managedContext = coreDataStack.managedContext
+            vc.managedContext = resultsController.managedObjectContext
         }
     }
     
+}
+
+extension MediminderTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
     
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
     
-    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        default:
+            break
+        }
+    }
 }
