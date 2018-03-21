@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
+import UserNotifications
 
-    // MARK: Border Controls
+// MARK: Border Controls
 
 @IBDesignable extension UIButton {
     
@@ -42,21 +44,33 @@ import UIKit
     }
 }
 
-    // MARK: Outlets
+// MARK: Outlets
 
 class AddMediminderController: UIViewController, UITextFieldDelegate {
-
+    
+    // MARK: Properties
+    
+    var managedContext: NSManagedObjectContext!
+    var medication: Medication?
+    
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
-        textView.delegate = self as? UITextViewDelegate
+        textView.delegate = self
         
         super.viewDidLoad()
-    // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
         textView.becomeFirstResponder()
+        
+        if let medication = medication {
+            textView.text = medication.title
+            textView.text = medication.title // duplicated to keep placeholder
+            segmentedControl.selectedSegmentIndex = Int(medication.priority)
+        }
     }
     
     // keyboard disappears when user touches the screen
@@ -66,11 +80,83 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
     
     // MARK: Returns
     
-    @IBAction func cancel(_ sender: UIButton) {
+    
+    fileprivate func dismissAndResign() {
         dismiss(animated: true)
         textView.resignFirstResponder()
     }
+    
+    @IBAction func cancel(_ sender: UIButton) {
+        dismissAndResign()
+    }
+    
+        func timedNotifications(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ()) {
+        
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+            
+            let content = UNMutableNotificationContent()
+            content.title = "Medication Reminder!"
+            content.subtitle = ""
+            content.body = "Don't forget to take your " + textView.text
+            
+            let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if error != nil {
+                    completion(false)
+                } else {
+                    completion(true)
+                }
+                }
+        }
+        
+    
     @IBAction func done(_ sender: UIButton) {
+        timedNotifications(inSeconds: 2) { (success) in
+            if success {
+                print("Successfully Notified")
+            }
+        }
+        guard let title = textView.text, !title.isEmpty else {
+            return
+        }
+        
+    
+        
+        // Checks to see if medication exists in list already
+        
+        if let medication = self.medication {
+            medication.title = title
+            medication.priority = Int16(segmentedControl.selectedSegmentIndex)
+        } else {
+            
+            // Create a new medication item
+            
+            let medication = Medication(context: managedContext)
+            medication.title = title
+            medication.priority = Int16(segmentedControl.selectedSegmentIndex)
+            medication.date = Date()
+        }
+        
+        do {
+            try managedContext.save()
+            dismissAndResign()
+        } catch {
+            print("Error saving medication: \(error)")
+        }
+    }
+}
 
+extension AddMediminderController: UITextViewDelegate {
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if doneButton.isHidden {
+            textView.text.removeAll()
+            textView.textColor = .black
+            
+            doneButton.isHidden = false
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
 }
