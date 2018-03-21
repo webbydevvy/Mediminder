@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
     // MARK: Border Controls
 
@@ -45,6 +46,11 @@ import UIKit
     // MARK: Outlets
 
 class AddMediminderController: UIViewController, UITextFieldDelegate {
+    
+    // MARK: Properties
+    
+    var managedContext: NSManagedObjectContext!
+    
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -66,12 +72,28 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
     
     // MARK: Returns
     
+    
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true)
         textView.resignFirstResponder()
     }
     @IBAction func done(_ sender: UIButton) {
-        dismiss(animated: true)
+        guard let title = textView.text, !title.isEmpty else {
+            return
+        }
+        
+        let medication = Medication(context: managedContext)
+        medication.title = title
+        medication.priority = Int16(segmentedControl.selectedSegmentIndex)
+        medication.date = Date()
+        
+        do {
+            try managedContext.save()
+            dismiss(animated: true)
+            textView.resignFirstResponder()
+        } catch {
+            print("Error saving medication: \(error)")
+        }
     }
 }
 

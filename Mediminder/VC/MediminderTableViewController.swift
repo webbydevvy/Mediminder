@@ -80,4 +80,15 @@ class MediminderTableViewController: UITableViewController {
         return UISwipeActionsConfiguration(actions: [action])
     }
 
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let _ = sender as? UIBarButtonItem, let vc = segue.destination as? AddMediminderController {
+            vc.managedContext = coreDataStack.managedContext
+        }
+    }
+    
+    
+    
+    
 }
