@@ -118,11 +118,11 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-AT-jXR">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="29"/>
                                         <segments>
-                                            <segment title="!"/>
-                                            <segment title="!!"/>
-                                            <segment title="!!!"/>
+                                            <segment title="8am"/>
+                                            <segment title="Midday"/>
+                                            <segment title="8pm"/>
                                         </segments>
-                                        <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="0"/>
@@ -179,6 +179,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="done:" destination="Fqw-WX-HEq" eventType="touchUpInside" id="fpA-F1-GqY"/>
+                                                    <action selector="downButtonPop:" destination="GqE-4a-dTb" eventType="touchUpInside" id="dJL-kv-DF9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -186,7 +187,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BtX-qp-GtW" firstAttribute="trailing" secondItem="jBB-N7-5dC" secondAttribute="trailing" constant="16" id="0Em-fu-5er"/>
                             <constraint firstItem="jBB-N7-5dC" firstAttribute="height" secondItem="1aO-yY-ne3" secondAttribute="height" multiplier="0.4" id="As5-Ud-Isu"/>
@@ -241,6 +242,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPd-4O-2Od" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GqE-4a-dTb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="730.39999999999998" y="129.98500749625188"/>
         </scene>

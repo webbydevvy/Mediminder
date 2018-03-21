@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 // MARK: Border Controls
 
@@ -71,9 +72,6 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
             segmentedControl.selectedSegmentIndex = Int(medication.priority)
         }
     }
-    
-    
-    
     
     // keyboard disappears when user touches the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

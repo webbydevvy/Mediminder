@@ -8,16 +8,25 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class MediminderTableViewController: UITableViewController {
     
     // MARK: Properties
-    
     var resultsController: NSFetchedResultsController<Medication>!
     let coreDataStack = CoreDataStack()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (success, error) in
+            
+            if error != nil {
+                print("Authorisation Unsuccessful")
+            } else {
+                print("Authorisation Successful")
+            }
+        }
         
         // Request
         let request: NSFetchRequest<Medication> = Medication.fetchRequest()
@@ -42,7 +51,6 @@ class MediminderTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resultsController.sections?[section].numberOfObjects ?? 0
     }
@@ -56,14 +64,13 @@ class MediminderTableViewController: UITableViewController {
 
         return cell
     }
-    // MARK: TableView Delegate
     
+    // MARK: TableView Delegate
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             // TODO: Delete medication
             let medication = self.resultsController.object(at: indexPath) // selects medication
             self.resultsController.managedObjectContext.delete(medication) // deletes medication
-            
             // On delete, if not successful, throw an error
             do {
                 try self.resultsController.managedObjectContext.save()
@@ -105,7 +112,6 @@ class MediminderTableViewController: UITableViewController {
     }
     
     // MARK: Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let _ = sender as? UIBarButtonItem, let vc = segue.destination as? AddMediminderController {
             vc.managedContext = resultsController.managedObjectContext
@@ -119,9 +125,9 @@ class MediminderTableViewController: UITableViewController {
             }
         }
     }
-    
 }
 
+    // The following code updates the table view to show new entries
 extension MediminderTableViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
