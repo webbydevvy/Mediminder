@@ -61,7 +61,17 @@ class MediminderTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             // TODO: Delete medication
-            completion(true)
+            let medication = self.resultsController.object(at: indexPath) // selects medication
+            self.resultsController.managedObjectContext.delete(medication) // deletes medication
+            
+            // On delete, if not successful, throw an error
+            do {
+                try self.resultsController.managedObjectContext.save()
+                completion(true)
+            } catch {
+                print("Delete failed: \(error)")
+                completion(false)
+            }
         }
         action.image = #imageLiteral(resourceName: "trash")
         action.backgroundColor = .red
@@ -72,19 +82,41 @@ class MediminderTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Check") { (action, view, completion) in
             // TODO: Delete medication
-            completion(true)
+            let medication = self.resultsController.object(at: indexPath) // selects medication
+            self.resultsController.managedObjectContext.delete(medication) // deletes medication
+            
+            // On delete, if not successful, throw an error
+            do {
+                try self.resultsController.managedObjectContext.save()
+                completion(true)
+            } catch {
+                print("Delete failed: \(error)")
+                completion(false)
+            }
         }
         action.image = #imageLiteral(resourceName: "check")
         action.backgroundColor = .green
         
         return UISwipeActionsConfiguration(actions: [action])
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowAddMedication", sender: tableView.cellForRow(at: indexPath))
+    }
+    
     // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let _ = sender as? UIBarButtonItem, let vc = segue.destination as? AddMediminderController {
             vc.managedContext = resultsController.managedObjectContext
+        }
+        
+        if let cell = sender as? UITableViewCell, let vc = segue.destination as? AddMediminderController {
+            vc.managedContext = resultsController.managedObjectContext
+            if let indexPath = tableView.indexPath(for: cell) {
+                let medication = resultsController.object(at: indexPath)
+                vc.medication = medication
+            }
         }
     }
     
@@ -104,6 +136,15 @@ extension MediminderTableViewController: NSFetchedResultsControllerDelegate {
         case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+        case .update:
+            if let indexPath = indexPath, let cell = tableView.cellForRow(at: indexPath) {
+               let medication = resultsController.object(at: indexPath)
+                cell.textLabel?.text = medication.title
             }
         default:
             break

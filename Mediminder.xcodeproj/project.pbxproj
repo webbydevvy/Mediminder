@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E28B9DB220615FED000E5A17 /* AddMediminderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B9DB120615FED000E5A17 /* AddMediminderController.swift */; };
 		E28B9DB420616072000E5A17 /* MediminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B9DB320616072000E5A17 /* MediminderTableViewController.swift */; };
+		E2A7AB0C2062970500066A43 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7AB0B2062970500066A43 /* GradientView.swift */; };
 		E2BB66A22062703D0037CD68 /* Medication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2BB66A02062703D0037CD68 /* Medication.xcdatamodeld */; };
 		E2BB66A42062719D0037CD68 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BB66A32062719D0037CD68 /* CoreDataStack.swift */; };
 		E2CE178C205FDA60005654CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE178B205FDA60005654CE /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		E28B9DB120615FED000E5A17 /* AddMediminderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMediminderController.swift; sourceTree = "<group>"; };
 		E28B9DB320616072000E5A17 /* MediminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediminderTableViewController.swift; sourceTree = "<group>"; };
+		E2A7AB0B2062970500066A43 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		E2BB66A12062703D0037CD68 /* Medications.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medications.xcdatamodel; sourceTree = "<group>"; };
 		E2BB66A32062719D0037CD68 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		E2CE1788205FDA60005654CE /* Mediminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				E2CE1792205FDA60005654CE /* Assets.xcassets */,
 				E2CE1794205FDA60005654CE /* LaunchScreen.storyboard */,
 				E2CE1797205FDA60005654CE /* Info.plist */,
+				E2A7AB0B2062970500066A43 /* GradientView.swift */,
 			);
 			path = Mediminder;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				E2CE178E205FDA60005654CE /* ViewController.swift in Sources */,
 				E2BB66A22062703D0037CD68 /* Medication.xcdatamodeld in Sources */,
 				E2BB66A42062719D0037CD68 /* CoreDataStack.swift in Sources */,
+				E2A7AB0C2062970500066A43 /* GradientView.swift in Sources */,
 				E2CE178C205FDA60005654CE /* AppDelegate.swift in Sources */,
 				E28B9DB420616072000E5A17 /* MediminderTableViewController.swift in Sources */,
 			);

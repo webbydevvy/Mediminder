@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-    // MARK: Border Controls
+// MARK: Border Controls
 
 @IBDesignable extension UIButton {
     
@@ -43,15 +43,16 @@ import CoreData
     }
 }
 
-    // MARK: Outlets
+// MARK: Outlets
 
 class AddMediminderController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     
     var managedContext: NSManagedObjectContext!
+    var medication: Medication?
     
-
+    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var doneButton: UIButton!
@@ -61,9 +62,18 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
         textView.delegate = self
         
         super.viewDidLoad()
-    // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
         textView.becomeFirstResponder()
+        
+        if let medication = medication {
+            textView.text = medication.title
+            textView.text = medication.title // duplicated to keep placeholder
+            segmentedControl.selectedSegmentIndex = Int(medication.priority)
+        }
     }
+    
+    
+    
     
     // keyboard disappears when user touches the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -86,10 +96,20 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let medication = Medication(context: managedContext)
-        medication.title = title
-        medication.priority = Int16(segmentedControl.selectedSegmentIndex)
-        medication.date = Date()
+        // Checks to see if medication exists in list already
+        
+        if let medication = self.medication {
+            medication.title = title
+            medication.priority = Int16(segmentedControl.selectedSegmentIndex)
+        } else {
+            
+            // Create a new medication item
+            
+            let medication = Medication(context: managedContext)
+            medication.title = title
+            medication.priority = Int16(segmentedControl.selectedSegmentIndex)
+            medication.date = Date()
+        }
         
         do {
             try managedContext.save()
