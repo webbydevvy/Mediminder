@@ -2,6 +2,8 @@
 
 A medication reminder app
 
+Technologies used: Swift 4, Xcode 9.2
+
 ```
 # User stories - MVP
 
