@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMediminderController: UIViewController {
+class AddMediminderController: UIViewController, UITextFieldDelegate {
     
     // MARK: Outlets
 
@@ -18,47 +18,23 @@ class AddMediminderController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        textView.delegate = self as? UITextViewDelegate
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow(with:)),
-            name: .UIKeyboardWillShow,
-            object: nil
-        )
+    // Do any additional setup after loading the view.
     }
     
-    // MARK: Actions
-    
-    @objc func keyboardWillShow(with notification: Notification) {
-        let key = "key_that_might_not_exist"
-        guard let keyboardFrame = notification.userInfo?[key] as? NSValue else { return }
-
-        let keyboardHeight = keyboardFrame.cgRectValue.height
-
-        bottomConstraint.constant = keyboardHeight
-
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-
+    // keyboard disappears when user touches the screen
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-
+    
+    // MARK: Returns
+    
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true)
     }
     @IBAction func done(_ sender: UIButton) {
-        
+
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }

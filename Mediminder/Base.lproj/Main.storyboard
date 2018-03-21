@@ -101,7 +101,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Orn-e3-cR2">
-                                <rect key="frame" x="16" y="662" width="382" height="74"/>
+                                <rect key="frame" x="16" y="337" width="382" height="74"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fSg-AT-jXR">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="29"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="jBB-N7-5dC" firstAttribute="height" secondItem="1aO-yY-ne3" secondAttribute="height" multiplier="0.4" id="As5-Ud-Isu"/>
                             <constraint firstItem="BtX-qp-GtW" firstAttribute="trailing" secondItem="Orn-e3-cR2" secondAttribute="trailing" constant="16" id="DqA-75-Rla"/>
                             <constraint firstItem="jBB-N7-5dC" firstAttribute="top" secondItem="BtX-qp-GtW" secondAttribute="top" id="MUJ-3t-QGC"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Orn-e3-cR2" secondAttribute="bottom" id="NS1-vm-0AC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Orn-e3-cR2" secondAttribute="bottom" constant="325" id="NS1-vm-0AC"/>
                             <constraint firstItem="Orn-e3-cR2" firstAttribute="leading" secondItem="BtX-qp-GtW" secondAttribute="leading" constant="16" id="Y7T-H1-R4M"/>
                             <constraint firstItem="jBB-N7-5dC" firstAttribute="leading" secondItem="BtX-qp-GtW" secondAttribute="leading" constant="16" id="at3-tb-Yb7"/>
                             <constraint firstItem="jBB-N7-5dC" firstAttribute="top" secondItem="BtX-qp-GtW" secondAttribute="top" id="eVM-NK-5y3"/>
