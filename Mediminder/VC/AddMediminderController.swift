@@ -89,10 +89,39 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
     @IBAction func cancel(_ sender: UIButton) {
         dismissAndResign()
     }
+    
+        func timedNotifications(inSeconds: TimeInterval, completion: @escaping (_ Success: Bool) -> ()) {
+        
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: inSeconds, repeats: false)
+            
+            let content = UNMutableNotificationContent()
+            content.title = "Medication Reminder!"
+            content.subtitle = ""
+            content.body = "Don't forget to take your " + textView.text
+            
+            let request = UNNotificationRequest(identifier: "customNotification", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().add(request) { (error) in
+                if error != nil {
+                    completion(false)
+                } else {
+                    completion(true)
+                }
+                }
+        }
+        
+    
     @IBAction func done(_ sender: UIButton) {
+        timedNotifications(inSeconds: 2) { (success) in
+            if success {
+                print("Successfully Notified")
+            }
+        }
         guard let title = textView.text, !title.isEmpty else {
             return
         }
+        
+    
         
         // Checks to see if medication exists in list already
         
