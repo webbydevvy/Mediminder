@@ -52,7 +52,7 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
-        textView.delegate = self as? UITextViewDelegate
+        textView.delegate = self
         
         super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -72,5 +72,19 @@ class AddMediminderController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func done(_ sender: UIButton) {
 
+    }
+}
+
+extension AddMediminderController: UITextViewDelegate {
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if doneButton.isHidden {
+            textView.text.removeAll()
+            textView.textColor = .black
+            
+            doneButton.isHidden = false
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
     }
 }
