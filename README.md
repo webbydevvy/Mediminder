@@ -14,8 +14,8 @@
 <h2> Built with: </h2> 
   <p>Swift 4, Xcode 9.2 </p>
   <a>
-    <img alt="Swift 4" title="Swift 4" src="https://github.com/serenahathi/mediminder/blob/making-readme/swift.png" width="70">
-     <img alt="Xcode 9.2" title="Xcode 9.2" src="https://github.com/serenahathi/mediminder/blob/making-readme/xcode.png" widt="70">                                                                                                                                  </a>
+    <img alt="Swift 4" title="Swift 4" align="left" src="https://github.com/serenahathi/mediminder/blob/making-readme/swift.png" width="70">
+     <img alt="Xcode 9.2" title="Xcode 9.2" src="https://github.com/serenahathi/mediminder/blob/making-readme/xcode.png" widt="50">                                                                                                                                  </a>
     
  
 ```
