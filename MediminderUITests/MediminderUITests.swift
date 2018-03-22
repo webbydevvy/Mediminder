@@ -42,4 +42,45 @@ class MediminderUITests: XCTestCase {
         XCTAssertFalse(app.staticTexts["Enter details here..."].exists)
     }
     
+    func testEnteringTextPromptsDoneButtonToAppear() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
+        let textView = app.textViews["Enter details here..."]
+        textView.typeText("PParacetamol")
+        XCTAssert(app.buttons["Done"].exists)
+    }
+    
+    func testEnteringTextAppearsOnIndex() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
+        let textView = app.textViews["Enter details here..."]
+        textView.typeText("PParacetamol")
+            app.buttons["Done"].tap()
+        XCTAssert(app.staticTexts["Paracetamol"].exists)
+    }
+    
+    func testEnteringTextThenPressingCancel() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
+        let textView = app.textViews["Enter details here..."]
+        textView.typeText("IIbuprofen")
+        app.buttons["Cancel"].tap()
+        XCTAssertFalse(app.staticTexts["Ibuprofen"].exists)
+    }
+
+    func testDeletingMedication() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
+        let textView = app.textViews["Enter details here..."]
+        textView.typeText("CCalpol")
+        app.buttons["Done"].tap()
+        let tablesQuery = app.tables.cells
+        tablesQuery.element(boundBy: 0).swipeLeft()
+        tablesQuery.element(boundBy: 0).buttons["Delete"].tap()
+//        app.swipeLeft()
+        XCTAssert(app.staticTexts["Calpol"].exists)
+    }
+    
+    
+    
+
+    
+    
 }
+
