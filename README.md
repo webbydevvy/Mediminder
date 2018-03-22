@@ -1,5 +1,5 @@
 #Mediminder
-
+![alt text](https://github.com/serenahathi/mediminder/blob/master/pill-reminder.jpg)
 A medication reminder app
 
 Technologies used: Swift 4, Xcode 9.2
