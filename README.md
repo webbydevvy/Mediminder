@@ -11,7 +11,11 @@
 </p>
 
 
-Technologies used: Swift 4, Xcode 9.2
+<h2> Built with: </h2> 
+  <p>Swift 4, Xcode 9.2 </p>
+  <img alt="Swift 4" title="Swift 4" src="https://github.com/serenahathi/mediminder/blob/making-readme/swift.png width="130">
+  
+  <img alt="Xcode 9.2" title="Xcode 9.2 src="https://github.comserenahathi/mediminder/blob/making-readme/xcode.png widt="130">
 
 ```
 # User stories - MVP
