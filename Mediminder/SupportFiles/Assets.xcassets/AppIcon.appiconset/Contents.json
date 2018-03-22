@@ -109,11 +109,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "Icon-App-40x40@2x.png",
+      "filename" : "Icon-Small-50x50@1x.png",
       "unassigned" : true
     },
     {
-      "filename" : "Icon-App-40x40@3x.png",
+      "filename" : "Icon-Small-50x50@2x.png",
       "unassigned" : true
     }
   ],
