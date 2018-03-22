@@ -1,4 +1,4 @@
-## A medication reminder app
+
 
 <h1 align="center"> Mediminder </h1> <br>
 <p align="center">
@@ -6,6 +6,7 @@
     <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="350">
   </a>
   <a>
+    <h2>A medication reminder app</h2>
   </a>
 </p>
 
