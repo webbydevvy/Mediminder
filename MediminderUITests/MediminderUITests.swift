@@ -24,15 +24,22 @@ class MediminderUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        app.navigationBars["Medications"].buttons["Add"].tap()
+    func testAddNewMedication() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
         XCTAssert(app.staticTexts["Add a new medication!"].exists)
     }
     
-    func testCancel2() {
-        app.navigationBars["Medications"].buttons["Add"].tap()
+    func testCancelButton() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
         app.buttons["Cancel"].tap()
-        XCTAssert(app.navigationBars["Medications"].exists)
+        XCTAssert(app.navigationBars["Mediminder!"].exists)
+    }
+    
+    func testClickTextBoxRemovePlaceHolder() {
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
+        let returnButton = app.buttons["Return"]
+        returnButton.tap()
+        XCTAssertFalse(app.staticTexts["Enter details here..."].exists)
     }
     
 }
