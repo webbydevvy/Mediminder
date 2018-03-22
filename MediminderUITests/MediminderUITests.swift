@@ -25,14 +25,14 @@ class MediminderUITests: XCTestCase {
     }
     
     func testExample() {
-        app.navigationBars["Medications"].buttons["Add"].tap()
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
         XCTAssert(app.staticTexts["Add a new medication!"].exists)
     }
     
     func testCancel2() {
-        app.navigationBars["Medications"].buttons["Add"].tap()
+        app.navigationBars["Mediminder!"].buttons["Add"].tap()
         app.buttons["Cancel"].tap()
-        XCTAssert(app.navigationBars["Medications"].exists)
+        XCTAssert(app.navigationBars["Mediminder!"].exists)
     }
     
 }
