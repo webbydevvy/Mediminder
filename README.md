@@ -6,7 +6,7 @@
     <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="350">
   </a>
   <a>
-    <h2>A medication reminder app</h2>
+    <h2 align="center">A medication reminder app</h2>
   </a>
 </p>
 
