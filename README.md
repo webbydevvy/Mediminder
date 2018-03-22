@@ -1,11 +1,11 @@
-<img src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" height="200" weight="200" >
-
 ## A medication reminder app
 
 <h1 align="center"> Mediminder </h1> <br>
 <p align="center">
   <a>
-    <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="450">
+    <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="350">
+  </a>
+  <a>
   </a>
 </p>
 
