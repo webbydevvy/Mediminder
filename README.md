@@ -1,6 +1,15 @@
-#Mediminder
-![alt text](https://github.com/serenahathi/mediminder/blob/master/pill-reminder.jpg { width=50px height=50px })
-A medication reminder app
+
+
+<h1 align="center"> Mediminder </h1> <br>
+<p align="center">
+  <a>
+    <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="350">
+  </a>
+  <a>
+    <h2 align="center">A medication reminder app</h2>
+  </a>
+</p>
+
 
 Technologies used: Swift 4, Xcode 9.2
 
