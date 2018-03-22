@@ -1,4 +1,4 @@
-<img src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" align="middle" height="130" weight="130" >
+<img src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" height="200" weight="200" >
 
 # Mediminder
 ## A medication reminder app
