@@ -1,6 +1,5 @@
-<div align="center"> 
-  # Mediminder
-<img src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" height="130" weight="130" >
+<img src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" align="center" height="130" weight="130" >
+# Mediminder
 ## A medication reminder app
   </div>
 
