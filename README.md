@@ -1,7 +1,14 @@
 <img src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" height="200" weight="200" >
 
-# Mediminder
 ## A medication reminder app
+
+<h1 align="center"> Mediminder </h1> <br>
+<p align="center">
+  <a>
+    <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="450">
+  </a>
+</p>
+
 
 Technologies used: Swift 4, Xcode 9.2
 
