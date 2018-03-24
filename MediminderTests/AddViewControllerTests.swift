@@ -1,5 +1,5 @@
 //
-//  ViewControllerTests.swift
+//  AddViewControllerTests.swift
 //  MediminderTests
 //
 //  Created by Kaari Strack on 22/03/2018.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ViewControllerTests: XCTestCase {
+class AddViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
