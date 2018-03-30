@@ -1,9 +1,23 @@
-#Mediminder
 
-A medication reminder app
 
-Technologies used: Swift 4, Xcode 9.2
+<h1 align="center"> Mediminder </h1> <br>
+<p align="center">
+  <a>
+    <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="350">
+  </a>
+  <a>
+    <h2 align="center">A medication reminder app</h2>
+  </a>
+</p>
 
+
+<h2> Built with: </h2> 
+    <p>Swift 4,     Xcode 9.2 </p>
+  <a>
+    <img alt="Swift 4" title="Swift 4" align="left" src="https://github.com/serenahathi/mediminder/blob/making-readme/swift.png" width="100">
+     <img alt="Xcode 9.2" title="Xcode 9.2" src="https://github.com/serenahathi/mediminder/blob/making-readme/xcode.png" width="90">                                                                                                                                  </a>
+    
+ 
 ```
 # User stories - MVP
 
