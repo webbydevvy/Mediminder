@@ -30,7 +30,7 @@ $ git clone https://github.com/serenahathi/mediminder.git
 
 # User Stories - MVP
 ```
-As a user ,
+As a user,
 So I can better track when I need to take my medication,
 I want to be able to add a new medication to my app
 ```
