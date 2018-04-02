@@ -1,35 +1,39 @@
 
 
-<h1 align="center"> Mediminder </h1> <br>
-<p align="center">
-  <a>
-    <img alt="Mediminder" title="Mediminder" src="https://github.com/serenahathi/mediminder/blob/making-readme/RoundedIcon.png" width="350">
-  </a>
-  <a>
-    <h2 align="center">A medication reminder app</h2>
-  </a>
-</p>
+# Summary
 
+Mediminder is an iPhone app that allows users to manage their medication schedule with ease by sending them reminder notifications
 
-<h2> Built with: </h2> 
-    <p>Swift 4,     Xcode 9.2 </p>
-  <a>
-    <img alt="Swift 4" title="Swift 4" align="left" src="https://github.com/serenahathi/mediminder/blob/making-readme/swift.png" width="100">
-     <img alt="Xcode 9.2" title="Xcode 9.2" src="https://github.com/serenahathi/mediminder/blob/making-readme/xcode.png" width="90">                                                                                                                                  </a>
-    
- 
+# Demo
+
+**Contributors**
+
+- Magyar-Hunor Tamas
+- Serena Hathi
+- Jenny Arenas
+- Kaari Strack
+
+# Technologies
+  - Swift 4
+  - Xcode 9.2
+
+# User Stories - MVP
 ```
-# User stories - MVP
-
 As a user ,
 So I can better track when I need to take my medication,
-I want to be able to add a new medication in my app
+I want to be able to add a new medication to my app
+```
 
-As a user,
-So I can control my medication effectively,
-I want to be able to set my frequency and duration of reminder.
-
+```
 As a user,
 So I can remember to take my medication,
 I want to be able to receive a reminder
 ```
+
+```
+As a user,
+So I can control my medication effectively,
+I want to be able to set the frequency and duration of my reminder.
+```
+
+
