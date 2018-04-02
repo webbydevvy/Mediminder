@@ -9,6 +9,11 @@ Click to view the demo:
 <a href="https://vimeo.com/262593550">
 <img src="https://user-images.githubusercontent.com/29439776/38213612-d796d9d8-36b9-11e8-977f-0c01384b6257.png" alt="Mediminder demo" width="350" border="0"></a>
 
+# Technologies
+  - Swift 4
+  - XCode 9.2
+  - XCTest
+
 # Installation
 
 - Clone the repository by running the following command in your terminal:
@@ -21,12 +26,13 @@ $ git clone https://github.com/serenahathi/mediminder.git
 
 - Install [XCode](https://developer.apple.com/xcode/) and open the Mediminder directory in XCode
 
-- Click on the Play (▸) button in the top pane to initiate the iPhone Simulator and use the app
+- Click on the play (▸) button in the top pane to initiate the iPhone Simulator and use the app
 
-# Technologies
-  - Swift 4
-  - XCode 9.2
-  - XCTest
+# Running tests
+
+- Open the Mediminder directory in XCode
+- Select View -> Navigators -> Show Test Navigators from the top navigation bar in XCode 
+- Scroll down to MediminderUITests in the left hand pane and click the play button (▸) to run the tests
 
 # User Stories - MVP
 ```
