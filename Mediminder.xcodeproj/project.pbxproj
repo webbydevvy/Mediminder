@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E26F08AF20638D35009EEEF2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E26F08AE20638D35009EEEF2 /* Default-568h@2x.png */; };
-		E2825D4B206387CA0017F68D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2825D4A206387CA0017F68D /* ViewControllerTests.swift */; };
+		E28079AC20640799006067DC /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28079AB20640799006067DC /* TableViewControllerTests.swift */; };
 		E28B9DB220615FED000E5A17 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B9DB120615FED000E5A17 /* AddViewController.swift */; };
 		E28B9DB420616072000E5A17 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28B9DB320616072000E5A17 /* TableViewController.swift */; };
 		E2A7AB0C2062970500066A43 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7AB0B2062970500066A43 /* GradientView.swift */; };
+		E2AF7E422063DFAB0094A78E /* AddViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AF7E412063DFAB0094A78E /* AddViewControllerTests.swift */; };
 		E2BB66A22062703D0037CD68 /* Medication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2BB66A02062703D0037CD68 /* Medication.xcdatamodeld */; };
 		E2BB66A42062719D0037CD68 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BB66A32062719D0037CD68 /* CoreDataStack.swift */; };
 		E2CE178C205FDA60005654CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE178B205FDA60005654CE /* AppDelegate.swift */; };
@@ -42,10 +43,11 @@
 
 /* Begin PBXFileReference section */
 		E26F08AE20638D35009EEEF2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E2825D4A206387CA0017F68D /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		E28079AB20640799006067DC /* TableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		E28B9DB120615FED000E5A17 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		E28B9DB320616072000E5A17 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E2A7AB0B2062970500066A43 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		E2AF7E412063DFAB0094A78E /* AddViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewControllerTests.swift; sourceTree = "<group>"; };
 		E2BB66A12062703D0037CD68 /* Medications.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medications.xcdatamodel; sourceTree = "<group>"; };
 		E2BB66A32062719D0037CD68 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		E2CE1788205FDA60005654CE /* Mediminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mediminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +174,8 @@
 			children = (
 				E2CE17A0205FDA60005654CE /* MediminderTests.swift */,
 				E2CE17A2205FDA60005654CE /* Info.plist */,
-				E2825D4A206387CA0017F68D /* ViewControllerTests.swift */,
+				E2AF7E412063DFAB0094A78E /* AddViewControllerTests.swift */,
+				E28079AB20640799006067DC /* TableViewControllerTests.swift */,
 			);
 			path = MediminderTests;
 			sourceTree = "<group>";
@@ -335,8 +338,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2825D4B206387CA0017F68D /* ViewControllerTests.swift in Sources */,
+				E2AF7E422063DFAB0094A78E /* AddViewControllerTests.swift in Sources */,
 				E2CE17A1205FDA60005654CE /* MediminderTests.swift in Sources */,
+				E28079AC20640799006067DC /* TableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ class MediminderUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testAddNewMedication() {
+    func testExample() {
         app.navigationBars["Mediminder!"].buttons["Add"].tap()
         XCTAssert(app.staticTexts["Add a new medication!"].exists)
     }
