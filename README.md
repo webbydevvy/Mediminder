@@ -1,6 +1,6 @@
 
 
-# Summary
+# Summary
 
 Mediminder is an iPhone app that allows users to manage their medication schedule with ease by sending them reminder notifications
 
